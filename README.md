@@ -2,7 +2,7 @@
 
 An example of a CRUD application.
 
-**Live:** []()
+**Live:** [https://alex-miarowski.github.io/todo-app/](https://alex-miarowski.github.io/todo-app/)
 
 ___
 
