@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <script src="https://kit.fontawesome.com/79445b9466.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="top">
+            <h1 class="top__app-name">ToDo App</h1>
+            <input type="text" class="top__input input" placeholder="Enter the task content">
+            <button class="top__input-btn">Add</button>
+            <p class="top__warning"></p>
+        </div>
+
+        <div class="todo-list">
+            <h2 class="todo-list__header">ToDo List</h2>
+
+            <ul class="todo-list__list">
+                <li class="todo-list__list-item">Example task 1
+                    <div class="todo-list__list-item-tools">
+                        <button id="edit" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-pen-to-square"></i></button>
+                        <button id="complete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-check"></i></button>
+                        <button id="delete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+                </li>
+
+                <li class="todo-list__list-item">Example task 2
+                    <div class="todo-list__list-item-tools">
+                        <button id="edit" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-pen-to-square"></i></button>
+                        <button id="complete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-check"></i></button>
+                        <button id="delete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+                </li>
+
+                <li class="todo-list__list-item">Example task 3
+                    <div class="todo-list__list-item-tools">
+                        <button id="edit" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-pen-to-square"></i></button>
+                        <button id="complete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-check"></i></button>
+                        <button id="delete" class="todo-list__list-item-btn"><i
+                                class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="edit-panel not-visible">
+        <h2 class="edit-panel__heading">Edit your task:</h2>
+        <p class="edit-panel__warning"></p>
+        <input type="text" class="edit-panel__input input">
+        <div class="edit-panel__btns-box">
+            <button id="edit-accept" class="edit-panel__btn">Accept</button>
+            <button id="edit-cancel" class="edit-panel__btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

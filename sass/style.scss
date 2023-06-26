@@ -1,0 +1,171 @@
+@use './css_reset' as cssReset;
+@use './colors' as colors;
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.6rem;
+	background-color: colors.$background;
+}
+
+.fa-regular {
+	pointer-events: none;
+}
+
+.visible {
+	display: flex;
+}
+
+.not-visible {
+	display: none;
+}
+
+.completed {
+	color: colors.$grey;
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.input {
+	margin-top: 1em;
+	padding: 0.4em;
+	width: 80%;
+	border-radius: 8px;
+	border: none;
+	font-size: 1.8rem;
+}
+
+.app {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.top {
+	padding: 2em;
+	width: 100%;
+	background-color: colors.$top;
+
+	&__app-name {
+		font-weight: 600;
+		font-style: italic;
+	}
+
+	&__input {
+		&-btn {
+			margin-left: 0.8em;
+			margin-top: 0.4em;
+			padding: 0.4em 0.6em;
+			font-size: 1.8rem;
+			border-radius: 8px;
+			background-color: colors.$btns;
+			transform: background-color 0.3s;
+
+			&:hover{
+				background-color: colors.$btns-hover;
+			}
+		}
+	}
+
+	&__warning {
+		margin-top: 0.6em;
+		color: colors.$warning;
+	}
+}
+
+.todo-list {
+	padding-bottom: 1em;
+	width: 100%;
+	background-color: colors.$bottom-main;
+
+	&__header {
+		padding: 1em 3em;
+		text-align: left;
+		font-weight: 500;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		list-style: none;
+
+		&-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1em;
+			padding-left: 1em;
+			width: 90%;
+			font-size: 1.7rem;
+			border-radius: 8px;
+			background-color: colors.$bottom-secondary;
+			overflow: hidden;
+
+			&-tools {
+				display: inline-block;
+				font-size: 0;
+			}
+
+			&-btn {
+				border: none;
+				background-color: transparent;
+				transition: background-color 0.3s;
+
+				i {
+					padding: 1em;
+				}
+
+				&:hover {
+					background-color: colors.$bottom-main;
+				}
+			}
+		}
+	}
+}
+
+.edit-panel {
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
+	max-width: 800px;
+	padding: 1em;
+	position: fixed;
+	bottom: 1em;
+	border-radius: 8px;
+	background-color: colors.$top;
+
+	&__heading {
+		font-weight: 500;
+	}
+
+	&__btns-box {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	&__btn {
+		padding: 0.6em 0.4em;
+		margin-top: 1em;
+		width: 30%;
+		border-radius: 8px;
+		background-color: colors.$btns;
+		transition: background-color .3s;
+
+		&:hover{
+			background-color: colors.$btns-hover;
+		}
+	}
+
+	&__warning{
+		color: colors.$warning;
+	}
+}
